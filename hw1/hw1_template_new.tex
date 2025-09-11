@@ -1,0 +1,151 @@
+%% Standard start of a latex document
+\documentclass[letterpaper,12pt]{article}
+%% Always use 12pt - it is much easier to read
+%% Things written after '%' sign, are ignored by the latex editor - they are how to introduce comments into your .tex source
+%% Anything mathematics related should be put in between '$' signs.
+
+%% Set some names and numbers here so we can use them below
+\newcommand{\myname}{Studentus Hardworkus} %%%%%%%%%%%%%%% ---------> Change this to your name
+\newcommand{\mynumber}{112358132134} %%%%%%%%%%%%%%% ---------> Change this to your student number
+\newcommand{\hw}{1} %%%%%%%%%%%%%%% --------->  set this to the homework number
+
+%%%%%%
+%% There is a bit of stuff below which you should not have to change
+%%%%%%
+
+%% AMS mathematics packages - they contain many useful fonts and symbols.
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+%% The geometry package changes the margins to use more of the page, I suggest
+%% using it because standard latex margins are chosen for articles and letters,
+%% not homework.
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+%% For details of how this package work, google the ``latex geometry documentation''.
+
+%%
+%% Fancy headers and footers - make the document look nice
+\usepackage{fancyhdr} %% for details on how this work, search-engine ``fancyhdr documentation''
+\pagestyle{fancy}
+%%
+%% The header
+\lhead{Mathematics 220} % course name as top-left
+\chead{Homework \hw} % homework number in top-centre
+\rhead{ \myname \\ \mynumber }
+%% This is a little more complicated because we have used `` \\ '' to force a line-break between the name and number.
+%%
+%% The footer
+\lfoot{\myname} % name on bottom-left
+\cfoot{Page \thepage} % page in middle
+\rfoot{\mynumber} % student number on bottom-right
+%%
+%% These put horizontal lines between the main text and header and footer.
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%%%
+
+%%%%%%
+%% We shouldn't have to change the stuff above, but if you want to add some newcommands and things like that, then putting them between here and the ``\begin{document}'' is a good idea.
+%%%%%%
+%% A useful command to define is
+%% This command will make the left and right braces as tall as needed. Use it as \set{1,2,3}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+%% We also redfine the negation symbol:
+\renewcommand{\neg}{\sim}
+
+\begin{document}
+Some useful latex for you to use:
+\begin{itemize}
+
+\item For sets use the command we defined in the latex source
+\[ \set{1,2,3}, \set{\emptyset, \set{4,5,6} }, \set{\frac{1}{2}, \frac{\alpha}{1+\beta}} \]
+it will format the braces nicely.
+
+\item Sometimes it is nice to write \(\ell\) instead of \(l\) because it looks nice in formulas.
+
+\item For logic, latex defines the symbols we need:
+\[
+\neg P \qquad
+P \lor Q \qquad
+P \land Q \qquad
+P \implies Q \qquad
+P \iff Q
+\]
+Unfortunately, we use $\sim$ for negation and not the default negation symbol $\lnot$, so it is useful to redefine things in the header of your document (a bit like how we define the set command.)
+
+\item For a proof we can (and probably should) use the proof environment. It automatically puts the word ``proof'' at the start and the little square at the end:
+  \begin{proof}
+    This is my proof. It is just missing a few details, but I'll put
+    in an equation
+    \[
+      a+b=c
+    \]
+    just because I can.
+  \end{proof}
+  Sometimes we want to give the proof a title, and the proof
+  environment helps us do that too. Here is a classic false-proof that
+  \(2=1\).
+  \begin{proof}[Not-quite-a-proof that two equals one]
+    Let \(x,y\) be non-zero real numbers so that \(x=y\). Then, multiplying by \(x\) gives us
+    \begin{align*}
+      x^2 & = xy & \text{now subtract } y^2 \\
+      x^2-y^2 & = xy - y^2 & \text{now factor} \\
+      (x-y)(x+y) & = y(x-y) & \text{divide by common factor of } (x-y) \\
+      x+y & = y  & \text{since } x=y \\
+      2y &=y & \text{now divide by y} \\
+      2 &=1
+    \end{align*}
+  \end{proof}
+  
+  
+  \item  For the truth tables you can use the following:
+\begin{center}  %%This centers the table
+\begin{tabular}{|c|c||c|c|c|c|} %% the symbols '|' appear as vertical lines and 'c' makes the entries centred between the those lines. The number of 'c's tell you how many entries you are planning on putting vertically. So change this according to your desired number of entries
+\hline %% puts a horizontal lines at the very top
+$A_1$&$A_2$&$A_3$&$A_4$ & $A_5$ & $A_6$\\ %% 6 entries on the top row, the '&' symbol distinguishes your entries. Replace 'A_i's with your desired entries. '\\' starts a new line
+\hline %% puts another horizontal line
+$a_{11}$&$a_{12}$&$a_{13}$&$a_{14}$&$a_{15}$&$a_{16}$\\ %%replace these entries with your entries
+\hline %% makes naother horizontal line
+$a_{21}$&$a_{22}$&$a_{23}$&$a_{24}$&$a_{25}$&$a_{26}$\\ %% same as above
+\hline
+$a_{31}$&$a_{32}$&$a_{33}$&$a_{34}$&$a_{35}$&$a_{36}$\\ %% same as above
+\hline
+$a_{41}$&$a_{42}$&$a_{43}$&$a_{44}$&$a_{45}$&$a_{46}$\\ %% same as above
+\hline %% puts another horizontal line at the bottom
+\end{tabular}
+\end{center} %% This closes the 'center' environment
+
+\item Remeember to cheque the speeling of your subbmisssion.
+\item Also remember that you should not include your scratchwork unless a question specifically asks for it.
+\item Finally, please try to make your work look nice and neat and use 12pt font --- think about the reader!
+\end{itemize}
+
+Please do not include the above text in your homework solution --- we have just included it here to help you write your homework. 
+
+\hrule
+
+\subsection*{Solutions to homework 1:}
+
+%%
+%% There are 2 list environments, itemize and enumerate. They are almost identical, but each item in itemize is started with a bullet or dot, while each item in enumerate is numbered.
+%%
+\begin{enumerate}
+%% This is where your actual homework will go.
+\item Your answer to question 1.
+
+\item Your solution to question 2.
+  \begin{proof}
+    The proof of question 2 will go here.
+  \end{proof}
+
+ \item Your solution to question 3.
+ \item Your solution to question 4.
+ \item Your solution to question 5.
+ \item Your solution to question 6.   
+ \item Your solution to question 7.
+\end{enumerate}
+
+
+%% Anything that comes after the ``\end{document}'' will be ignored, not just by us but by the latex editor too.
+\end{document}
+
+See, we can have stuff here which will not appear in the compiled file.
