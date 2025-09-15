@@ -111,10 +111,15 @@ Please do not include the above text in your homework solution --- we have just 
   where $P$: "$2$ is even", and $Q:$ "$11$ is prime".
 
   (b) The sentence, "if $n$ is a multiple of $7$ and $4$, then it is a multiple of $14$" is a false statement and
-  can be translated to "$(P(n) and Q(n)) => R(n)$", where $P(n)$: "n is a multiple of $7$", and $Q(n):$ "n is a multiple of $4$", and
+  can be translated to "$(P(n) and Q(n)) => R(n)$", where $P(n)$: "n is a multiple of $7$", $Q(n):$ "n is a multiple of $4$", and
   $R(n)$: "$n$ is a multiple of $14$".
 
-  (c)
+  (c) The sentence if "$5 <= x <= 17$" is an open statement, thus it has no truth value. It can be translated to $P(x)$, where $P(x)$:
+  "$5 <= x <= 17$".
+
+  (d) The sentence, "a real number $x$ is less than $-3$ or greater than $3$ if its square is greater than or equal to 9" is a true statement and
+  can be translated to "$P(n) => (Q(n) or R(n)$", where $P(n)$: "the square of $x$ is greater than $9$", $Q(n):$ "$x$ is less than $-3$", and
+  $R(n)$: "$x$ is greater than $3$".
 
 + Let $a in ZZ$, if $5a+11$ is odd then $9a+3$ is odd.
 
@@ -134,11 +139,24 @@ Please do not include the above text in your homework solution --- we have just 
 
   #h(1fr) $square$
 
-+ Your solution to question 3.
-+ Your solution to question 4.
++ Let $n in RR$. If $3 | n - 2$ then $3 | n^2 + 2n + 8$.
+
+  *Proof:* Assume that $3 | n - 2$ such that $n - 2 = 3ell$ and $ell in ZZ$. Now consider
+  the expression $n^2 + 2n + 8$.
+  $
+    n^2 + 2n + 8 &= n^2 + 2n - 8 + 16 && "add 16 and subtract -8"\
+    n^2 + 2n - 8 + 16 &= (n-2)(n+4) + 16 \
+    (n-2)(n+4) + 16 &= (3ell)(n+4) + 15 + 1\
+    (3ell)(n+4) + 16 &= 3(ell(n+4) + 5) + 1 \
+    3(ell(n+4)+5) + 1 &= 3t && t in ZZ
+  $
+  Thus, we can see that the expression $n^2+2n+8$ is of the form $3t$ under the assumption
+  that $3 | n-2$. Hence, $3 | n^2 + 2n + 8$.
++ Let $x,y in RR$. Show that $x y <= 1 / 2(x^2+y^2)$.
+
+  *Proof:* Consider the fact that $q^2 >= 0, q in RR$. Now consider the expression $(x-y)^2$ such that $x, y in RR$.
+  Meaning $(x-y)^2$ is of the form $q^2$, thus $(x-y)^2 >= 0$. Expanding the expression, we find $x^2 - 2x y + y^2 >= 0$ and after adding
+  $2x y$ and divding both sides by $2$ we find the expression $1 / 2(x^2 + y^2) >= x y$. Hence, $x y <= 1 / 2(x^2 + y^2)$.
 + Your solution to question 5.
 + Your solution to question 6.
 + Your solution to question 7.
-
-// Anything that comes after this will still be compiled, unlike LaTeX
-// But you can comment it out if you don't want it to appear
