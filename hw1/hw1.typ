@@ -47,65 +47,11 @@
 // We also redefine the negation symbol:
 #let neg = $tilde.op$
 
-// Document content starts here
-Some useful Typst for you to use:
-
-- For sets use the function we defined in the source:
-  $
-    #set_notation([1,2,3]), #set_notation([$emptyset$, #set_notation([4,5,6])]), #set_notation([$1 / 2, alpha / (1+beta)$])
-  $
-  it will format the braces nicely.
-
-- Sometimes it is nice to write $ell$ instead of $l$ because it looks nice in formulas.
-
-- For logic, Typst defines the symbols we need:
-  $ neg P quad P or Q quad P and Q quad P arrow.r Q quad P arrow.l.r Q $
-  We use $tilde.op$ for negation instead of the default negation symbol $not$.
-
-- For a proof we can create a simple proof block:
-
-  *Proof:* This is my proof. It is just missing a few details, but I'll put in an equation
-  $ a + b = c $
-  just because I can. #h(1fr) $square$
-
-  Sometimes we want to give the proof a title. Here is a classic false-proof that $2=1$.
-
-  *Not-quite-a-proof that two equals one:* Let $x,y$ be non-zero real numbers so that $x=y$. Then, multiplying by $x$ gives us
-  $
-    x^2 &= x y && "now subtract " y^2 \
-    x^2 - y^2 &= x y - y^2 && "now factor" \
-    (x-y)(x+y) &= y(x-y) && "divide by common factor of " (x-y) \
-    x + y &= y && "since " x = y \
-    2y &= y && "now divide by y" \
-    2 &= 1
-  $
-  #h(1fr) $square$
-
-- For truth tables you can use the following:
-  #align(center)[
-    #table(
-      columns: 6,
-      stroke: 1pt,
-      [$A_1$], [$A_2$], [$A_3$], [$A_4$], [$A_5$], [$A_6$],
-      [$a_(1 1)$], [$a_(1 2)$], [$a_(1 3)$], [$a_(1 4)$], [$a_(1 5)$], [$a_(1 6)$],
-      [$a_(2 1)$], [$a_(2 2)$], [$a_(2 3)$], [$a_(2 4)$], [$a_(2 5)$], [$a_(2 6)$],
-      [$a_(3 1)$], [$a_(3 2)$], [$a_(3 3)$], [$a_(3 4)$], [$a_(3 5)$], [$a_(3 6)$],
-      [$a_(4 1)$], [$a_(4 2)$], [$a_(4 3)$], [$a_(4 4)$], [$a_(4 5)$], [$a_(4 6)$],
-    )
-  ]
-
-- Remember to check the spelling of your submission.
-- Also remember that you should not include your scratchwork unless a question specifically asks for it.
-- Finally, please try to make your work look nice and neat and use 12pt font --- think about the reader!
-
-Please do not include the above text in your homework solution --- we have just included it here to help you write your homework.
-
-#line(length: 100%, stroke: 1pt)
 
 == Solutions to homework #hw:
 
 // Numbered list for homework problems
-+ Your answer to question 1.
++
 
   (a) The sentence, "$2$ is even and $11$ is prime" is a true statement and can be translated to "$P and Q$",
   where $P$: "$2$ is even", and $Q:$ "$11$ is prime".
@@ -144,7 +90,7 @@ Please do not include the above text in your homework solution --- we have just 
   *Proof:* Assume that $3 | n - 2$ such that $n - 2 = 3ell$ and $ell in ZZ$. Now consider
   the expression $n^2 + 2n + 8$.
   $
-    n^2 + 2n + 8 &= n^2 + 2n - 8 + 16 && "add 16 and subtract -8"\
+    n^2 + 2n + 8 &= n^2 + 2n - 8 + 16 && \
     n^2 + 2n - 8 + 16 &= (n-2)(n+4) + 16 \
     (n-2)(n+4) + 16 &= (3ell)(n+4) + 15 + 1\
     (3ell)(n+4) + 16 &= 3(ell(n+4) + 5) + 1 \
@@ -157,6 +103,46 @@ Please do not include the above text in your homework solution --- we have just 
   *Proof:* Consider the fact that $q^2 >= 0, q in RR$. Now consider the expression $(x-y)^2$ such that $x, y in RR$.
   Meaning $(x-y)^2$ is of the form $q^2$, thus $(x-y)^2 >= 0$. Expanding the expression, we find $x^2 - 2x y + y^2 >= 0$ and after adding
   $2x y$ and divding both sides by $2$ we find the expression $1 / 2(x^2 + y^2) >= x y$. Hence, $x y <= 1 / 2(x^2 + y^2)$.
-+ Your solution to question 5.
-+ Your solution to question 6.
-+ Your solution to question 7.
+
++ Let $n ,a, b, c, d in ZZ$, with n > 0. If $n|a$ and $n|c$, then $n|(a b + c d + a c)$.
+
+  *Proof:* Assume $n|a$ and $n|c$ and consider the expression $(a b + c d + a c)$ such that$n, a, b, c, d in ZZ$.
+  It follows that $a = n k$ and $c = n ell$ for some integers $k, ell in ZZ$. Consider the following.
+  $
+    (a b + c d + a c) &= ((n k) b + (n ell) d + (n k)(n ell)) \
+    ((n k) b + (n ell) d + (n k)(n ell)) &= n (k b + ell d + k ell) \
+    n (k b + ell d + k ell) &= n q, && q in ZZ\
+  $
+  Thus, we can see that $(a b + c d + a c)$ under the assumption that $n|a$ and $n|c$ is of the form $n q$
+  for some $q in ZZ$. Hence, $n|(a b + c d + a c)$.
+
++ Let $a in ZZ$. If $3a + 1$ is odd then $5a + 2$ is even.
+
+  *Answer:* No, our friend's solution is incorrect under a false conclusion they made regarding the expression $2((5k) / 3 + 1)$.
+  In their solution they are able to conclude that $5a + 2$ is even under the assumption that $3a + 1$ is odd. However in their
+  process, they made a critical mistake by assuming that $(5k) / 3 + 1$ is an integer. However, they are not able to conclude that fact based on the current assumptions we know about $k$.
+  This solution only works if it is certain that $3|k$, however that fact was never concluded.
+
+  *Proof:* Assume that $3a + 1$ is odd such that $3a + 1 = 2ell + 1$ and $ell in ZZ$. Consider the expression $5a + 2$.
+  $
+    5a + 2 &= 2a + (3a + 1) + 1 \
+    2a + (3a + 1) + 1 &= 2a + (2ell + 1) + 1 \
+    2a + (2ell + 1) + 1 &= 2(a + ell + 1) \
+    2(a + ell + 1) &= 2t && t in ZZ\
+  $
+  Thus, we can see that the expression $5a + 2$ is of the form $2t$ under the assumption that $3a + 1$ is odd. Hence, $5a + 2$ is even.
++ Solution for question $7$.
+
+  *Proof:* Let $a > 0$ and $b > 0$ be funky numbers such that $a^ell$ and $b^k in ZZ$, for some $ell, k in NN$.
+  Consider the expression $(sqrt(a b))^t$ and let $t = 2 k ell$ such that $t in NN$.
+
+  $
+    (sqrt(a b))^t &= (sqrt(a b))^(2 k ell) \
+    (sqrt(a b))^(2 k ell) &= (a b)^(k ell) \
+    (a b)^(k ell) &= a^(k ell) b^(k ell) \
+    a^(k ell) b^(k ell) &= (a^ell)^k (b^k)^ell \
+    (a^ell)^k (b^k)^ell &= i q && i, q in ZZ\
+  $
+
+  It follows that $(sqrt(a b))^t = i q$ such that $i, q in ZZ$. This follows since the product of an integer is an integer. Thus the expression $(sqrt(a b))^t$ with $t = 2k ell$ is of the form $i q$ under the assumption that $a^ell$ and $b^k$ are integers. Hence, $sqrt(a b)$ is a funky number.
+
