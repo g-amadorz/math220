@@ -51,4 +51,25 @@
 
 // Numbered list for homework problems
 +
+  (a) $exists a in ZZ, ((6 | a and 8 | a) and 48 divides.not a)$. This statement is true choose $a = 24$, which is divisible by $8$ and $6$.
+
+  (b) $forall x in ZZ$ such that $(x <= 84)$ or
+
+  (c) $forall x,y in RR$ such that $(x^2 < y^2 or x > y)$.
+
++
+  For $a in RR$, we define the set $S_a = {x in RR : (x >= 0) and (x < a - 2)}$.
+
++
+  (a)
+
+  (b)
+
+
++
+  $forall a in ZZ, exists b in ZZ$ such that $a^b + b^2 equiv 1 mod 3$.
+
+  *Proof:*
+
+
 
