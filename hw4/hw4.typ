@@ -13,9 +13,12 @@
     #grid(
       columns: (1fr, 1fr, 1fr),
       align: (left, center, right),
-      [Mathematics 220], // course name as top-left
-      [Homework #hw], // homework number in top-centre
-      [#myname \ #mynumber] // name and number on top-right with line break
+      [Mathematics 220],
+      // course name as top-left
+      [Homework #hw],
+      // homework number in top-centre
+      [#myname \ #mynumber],
+      // name and number on top-right with line break
     )
     #line(length: 100%, stroke: 0.4pt)
   ],
@@ -24,9 +27,12 @@
     #grid(
       columns: (1fr, 1fr, 1fr),
       align: (left, center, right),
-      [#myname], // name on bottom-left
-      context [Page #counter(page).display()], // page in middle
-      [#mynumber] // student number on bottom-right
+      [#myname],
+      // name on bottom-left
+      context [Page #counter(page).display()],
+      // page in middle
+      [#mynumber],
+      // student number on bottom-right
     )
   ],
 )
@@ -64,8 +70,8 @@
   *Proof:* Assume that $n^2 + 1$ is a perfect square such that $n^2 + 1 = k^2$. We can say that $n^2 = k^2 - 1$.
 
   $
-    k^2 - n^2 &= (k + n)(k - n) \
-    1 &= (k + n)(k - n) \
+    k^2 - n^2 & = (k + n)(k - n) \
+            1 & = (k + n)(k - n) \
   $
 
   Now consider the following cases, since we know that the only divisors of $1$ are $1$ and $-1$, we can conclude that either both $(k + n)$ and $(k - n)$
@@ -74,20 +80,22 @@
   - *Case 1:* Assume that $(k + n) = 1 "and" (k - n) = 1$.
 
     $
-      k &= 1 - n \ && "We rearrange" (k + 1) = -1
-      (1 - n) - n &= 1 \
-      -2n &= 0
-      n &= 0
+        k & = 1 - n \
+          &         & "We rearrange" (k + 1) = -1
+                      (1 - n) - n & = 1 \
+      -2n & = 0
+            n       &         = 0
     $
 
 
   - *Case 2:* Assume that $(k + n) = -1 "and" (k - n) = -1$.
 
     $
-      k &= -1 - n \ && "We rearrange" (k + 1) = -1
-      (-1 - n) - n &= -1 \
-      -2n &= 0
-      n &= 0
+        k & = -1 - n \
+          &          & "We rearrange" (k + 1) = -1
+                       (-1 - n) - n & = -1 \
+      -2n & = 0
+            n        &          = 0
     $
 
   Hence, in either case that $(k+n) "or" (k-n)$ are equal to $1$ or $-1$ we can conclude that $n = 0$, thus if $n^2 + 1$ is a perfect square then $n = 0$.
@@ -141,17 +149,17 @@
   *Proof:* Assume that $epsilon > 0$, let $M = sqrt(2 / epsilon)$ and assume $x >= M$. Consider the following.
 
   $
-    x &>= M \
-    x &>= sqrt(2 / epsilon) \
-    x^2 &>= 2 / epsilon \
-    epsilon &>= 2 / x^2 \
-    epsilon &> 2 / (x^2 + 1)
+          x & >= M \
+          x & >= sqrt(2 / epsilon) \
+        x^2 & >= 2 / epsilon \
+    epsilon & >= 2 / x^2 \
+    epsilon & > 2 / (x^2 + 1)
   $
 
   Hence
 
   $
-    abs((2 x^2) / (x^2+1) - 2) &= abs((2x^2 - 2x^2 - 2) / (x^2 + 1)) &= 2 / (x^2+1) &< epsilon
+    abs((2 x^2) / (x^2+1) - 2) & = abs((2x^2 - 2x^2 - 2) / (x^2 + 1)) & = 2 / (x^2+1) & < epsilon
   $
 
   #qed
@@ -172,14 +180,14 @@
   *Proof:* Assume that $epsilon > 0$, let $delta = sqrt(epsilon)$ and assume that $|0 < x - 0 < delta|, x in RR$. Consider the following.
 
   $
-    0 &< x < sqrt(epsilon) \
-    0 &< x^2 < epsilon \
+    0 & < x < sqrt(epsilon) \
+    0 & < x^2 < epsilon \
   $
 
   Hence
 
   $
-    |f(x)| &<= x^2 < epsilon & "and" |f(x) - 0| < epsilon \
+    |f(x)| & <= x^2 < epsilon & "and" |f(x) - 0| < epsilon \
   $
 
 
