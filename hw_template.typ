@@ -46,6 +46,8 @@
 // We also redefine the negation symbol:
 #let neg = $tilde.op$
 
+// QED symbol macro - use #qed at the end of proofs (right-aligned on same line)
+#let qed = h(1fr) + box(width: 0.5em, height: 0.5em, fill: black, stroke: none)
 
 == Solutions to homework #hw:
 
