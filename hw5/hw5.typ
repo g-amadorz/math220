@@ -4,8 +4,8 @@
 
 // Set some names and numbers here so we can use them below
 #let myname = "Gabriel Amador Zarza" // ---------> Change this to your name
-#let mynumber = "97852387" // ---------> Change this to your student number
-#let hw = "0" // --------->  set this to the homework number
+#let mynumber = "97853287" // ---------> Change this to your student number
+#let hw = "5" // --------->  set this to the homework number
 
 // Page setup with margins similar to the LaTeX geometry package
 #set page(
@@ -61,6 +61,51 @@
 + *Solutions*
 
   - (a) $u_1 = 4 / 3, u_2 = 10 / 7, u_3 = 24 / 17$
-  - (b) $$
+
+  - (b) _Proof_
+
+    *Proof by Induction:*
+
+    *Base Case:* $n = 0$, $u_0 = 2$ so $1 <= u_0 <= 2$. Base case holds.
+
+    *I.H.* for $k >= 0,$ $1 <= u_k <= 2$
+
+    *I.S.*
+
+    - Lower Bound
+
+      $
+                          u_k & >= 1       &             "By I.H." \
+                      u_k + 2 & >= u_k + 1 \
+        (u_k + 2) / (u_k + 1) & >= 1       & "By I.H." u_k + 1 > 0 \
+                      u_(k+1) & >= 1
+      $
+
+    - Upper Bound
+      $
+                          u_k & <= 2        &             "By I.H." \
+                      u_k + 2 & <= 2u_k + 2 \
+        (u_k + 2) / (u_k + 1) & <= 2        & "By I.H." u_k + 1 > 0 \
+                      u_(k+1) & <= 2
+      $
+
+    Hence, by induction $1 <= u_k <= 2$.
+
+
++ *Solution*
+
+  - *Proof by Induction:*
+
+    *Base Case:*
+
+
+
+
+
+
+
+
+
+
 
 
