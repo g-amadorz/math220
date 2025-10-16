@@ -75,18 +75,18 @@
     - Lower Bound
 
       $
-                          u_k & >= 1       &             "By I.H." \
-                      u_k + 2 & >= u_k + 1 \
-        (u_k + 2) / (u_k + 1) & >= 1       & "By I.H." u_k + 1 > 0 \
-                      u_(k+1) & >= 1
+        u_k & >= 1 & "By I.H." \
+        u_k + 2 & >= u_k + 1 \
+        (u_k + 2) / (u_k + 1) & >= 1 & "By I.H." u_k + 1 > 0 \
+        u_(k+1) & >= 1
       $
 
     - Upper Bound
       $
-                          u_k & <= 2        &             "By I.H." \
-                      u_k + 2 & <= 2u_k + 2 \
-        (u_k + 2) / (u_k + 1) & <= 2        & "By I.H." u_k + 1 > 0 \
-                      u_(k+1) & <= 2
+        u_k & <= 2 & "By I.H." \
+        u_k + 2 & <= 2u_k + 2 \
+        (u_k + 2) / (u_k + 1) & <= 2 & "By I.H." u_k + 1 > 0 \
+        u_(k+1) & <= 2
       $
 
     Hence, by induction $1 <= u_k <= 2$.
@@ -100,32 +100,32 @@
     - *I.H.*
 
       $
-        sum_(k=1)^ell k^3 & = (ell(ell+1)/ 2)^2
+        sum_(k=1)^ell k^3 & = (ell(ell+1) / 2)^2
       $
 
     - *I.S.*
 
       $
-                      sum_(k=1)^ell k^3 & = (ell(ell+1)/ 2)^2 \
-        sum_(k=1)^ell k^3 + (ell + 1)^3 & = (ell(ell+1)/ 2)^2 + (ell + 1)^3 \
-                sum_(k=1)^(ell + 1) k^3 & = (ell^2(ell+1)^2 + 4(ell + 1)^3) / 4 \
-                                        & = ((ell + 1)^2 (ell^2 + 4ell + 4)) / 4 \
-                                        & = ((ell + 1)^2 (ell+2)^2) / 4 \
-                                        & = (((ell + 1)(ell+2))/ 2)^2 \
+        sum_(k=1)^ell k^3 & = (ell(ell+1) / 2)^2 \
+        sum_(k=1)^ell k^3 + (ell + 1)^3 & = (ell(ell+1) / 2)^2 + (ell + 1)^3 \
+        sum_(k=1)^(ell + 1) k^3 & = (ell^2(ell+1)^2 + 4(ell + 1)^3) / 4 \
+        & = ((ell + 1)^2 (ell^2 + 4ell + 4)) / 4 \
+        & = ((ell + 1)^2 (ell+2)^2) / 4 \
+        & = (((ell + 1)(ell+2)) / 2)^2 \
       $
 
 
-  Hence by induction $forall n in NN, sum_(k=1)^ell k^3 & = (ell(ell+1)/ 2)^2$.
+  Hence by induction $forall n in NN, sum_(k=1)^ell k^3 & = (ell(ell+1) / 2)^2$.
 
 +
   - *Proof by Induction:*
 
-    - *Base Case:* $n = 1$, $1/1 <= 2 - 1$, $1<=1$. Base case holds.
+    - *Base Case:* $n = 1$, $1 / 1 <= 2 - 1$, $1<=1$. Base case holds.
 
     - *I.H.*
 
       $
-        sum_(i=1)^k 1/i^2 & <= 2 - 1 / n
+        sum_(i=1)^k 1 / i^2 & <= 2 - 1 / n
       $
 
     - *I.S.*
@@ -134,7 +134,7 @@
         sum_(k=1)^ell k^3 & <= 2 - 1 / n \
       $
 
-  Hence by induction $forall n in NN, sum_(k=1)^ell k^3 & = (ell(ell+1)/ 2)^2$.
+  Hence by induction $forall n in NN, sum_(k=1)^ell k^3 & = (ell(ell+1) / 2)^2$.
 
 
 

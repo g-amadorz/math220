@@ -71,7 +71,7 @@
 
   $
     k^2 - n^2 & = (k + n)(k - n) \
-            1 & = (k + n)(k - n) \
+    1 & = (k + n)(k - n) \
   $
 
   Now consider the following cases, since we know that the only divisors of $1$ are $1$ and $-1$, we can conclude that either both $(k + n)$ and $(k - n)$
@@ -80,22 +80,22 @@
   - *Case 1:* Assume that $(k + n) = 1 "and" (k - n) = 1$.
 
     $
-        k & = 1 - n \
-          &         & "We rearrange" (k + 1) = -1
-                      (1 - n) - n & = 1 \
+      k & = 1 - n \
+      & & "We rearrange" (k + 1) = -1
+      (1 - n) - n & = 1 \
       -2n & = 0
-            n       &         = 0
+      n & = 0
     $
 
 
   - *Case 2:* Assume that $(k + n) = -1 "and" (k - n) = -1$.
 
     $
-        k & = -1 - n \
-          &          & "We rearrange" (k + 1) = -1
-                       (-1 - n) - n & = -1 \
+      k & = -1 - n \
+      & & "We rearrange" (k + 1) = -1
+      (-1 - n) - n & = -1 \
       -2n & = 0
-            n        &          = 0
+      n & = 0
     $
 
   Hence, in either case that $(k+n) "or" (k-n)$ are equal to $1$ or $-1$ we can conclude that $n = 0$, thus if $n^2 + 1$ is a perfect square then $n = 0$.
@@ -149,9 +149,9 @@
   *Proof:* Assume that $epsilon > 0$, let $M = sqrt(2 / epsilon)$ and assume $x >= M$. Consider the following.
 
   $
-          x & >= M \
-          x & >= sqrt(2 / epsilon) \
-        x^2 & >= 2 / epsilon \
+    x & >= M \
+    x & >= sqrt(2 / epsilon) \
+    x^2 & >= 2 / epsilon \
     epsilon & >= 2 / x^2 \
     epsilon & > 2 / (x^2 + 1)
   $
