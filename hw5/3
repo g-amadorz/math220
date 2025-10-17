@@ -138,7 +138,7 @@
                                           & < 2 + (-(k+1) + 2k)/k(k+1) \
                                           & < 2 + k/k(k+1) - 1/k(k+1) \
                                           & < 2 + k/k(k+1) \
-                                  S_(k+1) & < 2 + 1/(k+1) \
+                                  S_(k+1) & < 2 1/(k+1) \
       $
 
   Hence by induction $forall n in NN, sum_(i=1)^n 1 / i^2 & <= 2 - 1 / n$
@@ -148,76 +148,10 @@
 
 
 +
-  - Solutions
-
-  (a) $u_(n+1) - 5^2 dot u_n = -17 dot 2^(3n+1)$
-
-  (b) _Proof_
-
-  *Proof by Induction*
-
-  *Base Case* $n = 0, 3 dot 5^(0 + 1) + 2^(0 + 1) = 17$ and $17 (mod 17) = 0$. Base case holds.
-
-  *I.H.* $forall k in ZZ, k >= 0, u_k = 3 dot 5^(2k + 1) + 2^(3k + 1) "s.t." 17 divides u_k$.
-
-  _Lemma_: $forall k in NN, u_(n+1) = -17 dot 2^(3n+1) + 5^2 dot u_n$
-
-  *I.S.*
-
-  $
-    u_(k+1) = & -17 dot 2^(3n+1) + 5^2 dot u_k &            "By Lemma" \
-            = & -17 dot 2^(3n+1) + 5^2 dot 17i & "By I.H. and" i in ZZ \
-            = & 17(-2^(3n+1)) + 17(5^2 dot i) \
-            = & 17(-2^(3n+1) + 5^2 dot i) \
-            = & 17ell                          &             ell in ZZ \
-  $
+  - _Proof by Induction_
 
 
-  Hence by induction, $17 divides u_n$.
 
-+
-
-  *Proof by Induction*
-
-  *Base Case* $n = 1, 2^(1^2) > 1!$ so $2 > 1$. Base case holds.
-
-  *I.H.* $forall k in NN, 2^(k^2) > k!$.
-
-
-  - *Sub Induction:* $forall t in NN, 2^(2t + 1) > (t + 1)$
-
-    *Base Case:* $t = 1, 2^(2(1) + 1) > 2$. Base case holds.
-
-    *I.H.* $forall s in NN, 2^(2s + 1) > (s + 1)$
-
-    *I.S.*
-
-    $
-      2^(2s + 1) > (s + 1) \
-      2 dot 2^(2s +1) > 2 (s + 1) \
-      2^(2s + 2) > 2s + 2 \
-      2^(2s + 2) > s + 2 \
-    $
-
-    Thus if $P(s)$ then $P(s+1)$.
-
-    Hence by induction, $forall t in NN, 2^(2t + 1) > t + 1$
-
-  _Lemma_: $forall k in NN, 2^(2k + 1) > k + 1$
-
-  *I.S.*
-
-  $
-                   2^(k^2) & > k! \
-       2^(k^2) dot (k + 1) & > k! dot (k + 1)             &     quad k >= 1 \
-    2^(k^2) dot 2^(2k + 1) & > 2^(k^2) dot (k+1) > (k+1)! & quad "By Lemma" \
-          2^(k^2 + 2k + 1) & > (k+1)! \
-                 2^(k+1)^2 & > (k+1)! \
-  $
-
-  Thus if $P(k)$ then $P(k+1)$
-
-  Hence by induction, $forall n in NN, 2^(n^2) > n!$
 
 
 
